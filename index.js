@@ -11,13 +11,14 @@ import {
     TouchableOpacity,
     ImageBackground
 } from 'react-native';
+import FastImage from 'react-native-fast-image'
 
 const resolveAssetSource = Image.resolveAssetSource;
 
 const ScalableImage = props => {
     const ImageComponent = props.background
         ? ImageBackground
-        : Image;
+        : FastImage;
 
     const [scalableWidth, setScalableWidth] = useState(null);
     const [scalableHeight, setScalableHeight] = useState(null);
